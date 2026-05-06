@@ -9,9 +9,7 @@ class Solution {
     private void Backtrack(int idx, int[] nums){
         res.add(new ArrayList<>(temp));
         for(int i=idx;i<nums.length;i++){
-            if(i>idx && nums[i]==nums[i-1]){
-                continue;
-            }
+            if(i>idx && nums[i]==nums[i-1]) continue;
             temp.add(nums[i]);
             Backtrack(i+1,nums);
             temp.remove(temp.size()-1);
